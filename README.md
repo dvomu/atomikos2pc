@@ -45,7 +45,7 @@ public class OrderServiceImpl implements OrderService {
 
 测试2：业务执行后出现异常
 异常发生前控制台日志显示插入成功，但是数据库中并没有数据，当异常出现后，实际数据从头到尾并没有提交
-![](http://upload.dvomu.com/mweb/16471013535339.jpg)
+
 
 测试3：无异常情况，logs和order数据库表中均有数据
 

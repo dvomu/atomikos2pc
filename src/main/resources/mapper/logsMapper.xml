@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dvomu.mapper.logs.LogMapper">
+
+    <insert id="insertLogInfo">
+        insert into log_info(id,create_time,content) values(#{id},#{createTime},#{content})
+    </insert>
+    <insert id="insertBatchLogs">
+        insert into log_info
+        (id,create_time,content)
+        values
+        <foreach collection="logInfoList" item="log" index="index" separator=",">
+            (#{log.id},#{log.createTime},#{log.content})
+        </foreach>
+    </insert>
+
+</mapper>

@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.xa.DruidXADataSource
+    druid:
+      master:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/order?autoReconnect=true&useSSL=false&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: 104551
+        maxPoolSize: 5
+      slave:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/logs?autoReconnect=true&useSSL=false&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: 104551
+        maxPoolSize: 5
+server:
+  port: 8080
+#mybatis:
+#  mapper-locations: classpath:/mapper/*.xml
+#  type-aliases-package: com.dvomu.pojo
+
